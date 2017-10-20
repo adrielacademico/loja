@@ -15,7 +15,7 @@ require_once("../includes/menu.php");
   <div class="container">
     <h3>Editar Categoria</h3>
 
-		<form action="alterar-categoria.php" method="post">
+		<form action="categorias/alterar-categoria.php" method="post">
 
       <input type="hidden" name="id" value="<?php echo $categoria->id ?>">
 
@@ -47,7 +47,7 @@ require_once("../includes/menu.php");
       </div>
 
       <div class="form-group">
-        <input type="submit" name="enviar" value="Enviar">
+        <input type="submit" name="enviar" value="Enviar" class="btn btn-success">
       </div>
     </form>
   </div>

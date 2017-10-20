@@ -24,7 +24,7 @@
 				</div>
 			<?php endif; ?>
 
-			<a href="form-categoria.php" class="btn btn-success botao-new">+ Adicionar uma nova Categoria</a>
+			<a href="categorias/form-categoria.php" class="btn btn-success botao-new">+ Adicionar uma nova Categoria</a>
 		</div> <!-- end row -->
 	</div> <!-- end container -->
 
@@ -56,7 +56,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-								<a href='editar-categoria.php?id=<?php echo $categoria->id ?>'
+								<a href='categorias/editar-categoria.php?id=<?php echo $categoria->id ?>'
 									class='btn btn-default btn-xs'>
 									Editar
 								</a>
@@ -83,7 +83,7 @@
 							      </div>
 							      <div class="modal-footer">
 							        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-											<a href='excluir-categoria.php?id=<?php echo $categoria->id ?>'
+											<a href='categorias/excluir-categoria.php?id=<?php echo $categoria->id ?>'
 												class="btn btn-danger" id="confirm" >Excluir
 											</a>
 							      </div>

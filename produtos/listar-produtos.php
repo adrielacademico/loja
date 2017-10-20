@@ -24,7 +24,7 @@
 				</div>
 			<?php endif; ?>
 
-			<a href="../loja/produtos/form-produto.php" class="btn btn-success botao-new">+ Adicionar um novo Produtos</a>
+			<a href="produtos/form-produto.php" class="btn btn-success botao-new">+ Adicionar um novo Produtos</a>
 		</div> <!-- end row -->
 	</div> <!-- end header -->
 
@@ -70,7 +70,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-								<a href='editar-produto.php?id=<?php echo $produto->id ?>'
+								<a href='produtos/editar-produto.php?id=<?php echo $produto->id ?>'
 									class='btn btn-default btn-xs'>
 									Editar
 								</a>
@@ -97,7 +97,7 @@
 							      </div>
 							      <div class="modal-footer">
 							        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-											<a href='excluir-produto.php?id=<?php echo $produto->id ?>'
+											<a href='produtos/excluir-produto.php?id=<?php echo $produto->id ?>'
 												class="btn btn-danger" id="confirm" >Excluir
 											</a>
 							      </div>

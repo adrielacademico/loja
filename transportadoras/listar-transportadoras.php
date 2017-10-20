@@ -24,7 +24,7 @@
 				</div>
 			<?php endif; ?>
 
-			<a href="form-transportadora.php" class="btn btn-success botao-new">+ Adicionar uma nova Transportadoras</a>
+			<a href="transportadoras/form-transportadora.php" class="btn btn-success botao-new">+ Adicionar uma nova Transportadoras</a>
 		</div> <!-- end row -->
 	</div> <!-- end header -->
 
@@ -46,7 +46,7 @@
 						<td><?php echo $transportadora->nome ?></td>
 						<td>
 							<div class="btn-group pull-right">
-								<a href='editar-transportadora.php?id=<?php echo $transportadora->id ?>'
+								<a href='transportadoras/editar-transportadora.php?id=<?php echo $transportadora->id ?>'
 									class='btn btn-default btn-xs'>
 									Editar
 								</a>
@@ -73,7 +73,7 @@
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-											<a href='excluir-transportadora.php?id=<?php echo $transportadora->id ?>'
+											<a href='transportadoras/excluir-transportadora.php?id=<?php echo $transportadora->id ?>'
 												class="btn btn-danger" id="confirm" >Excluir
 											</a>
 										</div>

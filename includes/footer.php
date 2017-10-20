@@ -6,13 +6,26 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- Editor summernote -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+	<script src="recursos/summernote/summernote.min.js"></script>
+	<!-- Calendário Bootstrap -->
+	<script src="recursos/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="recursos/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.min.js"></script>
 
 	<script>
+		//editor de texto
 		$(document).ready(function() {
 			$('#summernote').summernote({
 				height: 200
 			});
+		});
+	</script>
+
+	<script>
+		//calendários
+		$('#calendario').datepicker({
+			format: 'dd/mm/yyyy',
+			language: "pt-BR",
+			startDate: '+0d'
 		});
 	</script>
 

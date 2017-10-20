@@ -24,7 +24,7 @@
 				</div>
 			<?php endif; ?>
 
-			<a href="form-marca.php" class="btn btn-success botao-new">+ Adicionar uma nova Marca</a>
+			<a href="marcas/form-marca.php" class="btn btn-success botao-new">+ Adicionar uma nova Marca</a>
 		</div> <!-- end row -->
 	</div> <!-- end header -->
 
@@ -56,7 +56,7 @@
 						</td>
 						<td>
 							<div class="btn-group">
-								<a href='editar-marca.php?id=<?php echo $marca->id ?>'
+								<a href='marcas/editar-marca.php?id=<?php echo $marca->id ?>'
 									class='btn btn-default btn-xs'>
 									Editar
 								</a>
@@ -83,7 +83,7 @@
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-											<a href='excluir-marca.php?id=<?php echo $marca->id ?>'
+											<a href='marcas/excluir-marca.php?id=<?php echo $marca->id ?>'
 												class="btn btn-danger" id="confirm" >Excluir
 											</a>
 										</div>

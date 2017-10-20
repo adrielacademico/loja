@@ -17,7 +17,7 @@ require_once("../includes/menu.php");
 
 <div class="container">
 	<h3>Cadastrar Novo Produto</h3>
-	<form action="../loja/produtos/create-produto.php" method="post">
+	<form action="produtos/create-produto.php" method="post">
 		<div class="row">
 
 			<div class="col-md-8">
@@ -44,15 +44,27 @@ require_once("../includes/menu.php");
 			<div class="col-md-3">
 				<div class="form-group">
 					<label>Valor R$</label>
-					<input type="number" name="valor" class="form-control">
+					<input type="text" name="valor" class="form-control">
 				</div>
 			</div>
 
 			<div class="col-md-3">
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label>Data de Validade</label>
 					<input type="date" name="data_validade" class="form-control">
+				</div> -->
+
+
+				<label>Data de Validade</label>
+				<div class="input-group date">
+				    <input type="text" class="form-control" id="calendario" data-date-format="dd/mm/yyyy">
+				    <div class="input-group-addon">
+				        <span class="glyphicon glyphicon-th"></span>
+				    </div>
 				</div>
+
+
+
 			</div>
 
 			<div class="col-md-3">

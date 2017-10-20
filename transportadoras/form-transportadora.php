@@ -5,7 +5,7 @@ require_once("../includes/menu.php");
 
   <div class="container">
     <h3>Cadastrar Nova Transportadora</h3>
-    <form action="create-transportadora.php" method="post">
+    <form action="transportadoras/create-transportadora.php" method="post">
 
 			<div class="form-group">
         <label>Nome:</label>
@@ -13,7 +13,7 @@ require_once("../includes/menu.php");
       </div>
 
 			<div class="form-group">
-        <input type="submit" name="enviar" value="Enviar">
+        <input type="submit" name="enviar" value="Enviar" class="btn btn-success">
       </div>
 
 		</form>
