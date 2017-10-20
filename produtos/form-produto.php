@@ -44,7 +44,7 @@ require_once("../includes/menu.php");
 			<div class="col-md-3">
 				<div class="form-group">
 					<label>Valor R$</label>
-					<input type="text" name="valor" class="form-control">
+					<input type="text" name="valor" class="form-control" id="valor">
 				</div>
 			</div>
 
