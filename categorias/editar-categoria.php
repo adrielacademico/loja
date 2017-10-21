@@ -1,5 +1,5 @@
 <?php
-require_once("../banco/conexao.php");
+require_once("../config.php");
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM categorias WHERE id = {$id}";

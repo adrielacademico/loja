@@ -1,5 +1,5 @@
 <?php
-require_once("../banco/conexao.php");
+require_once("../config.php");
 
 $id = $_POST['id'];
 $nome = $_POST['nome'];
@@ -12,7 +12,11 @@ $sql = "UPDATE marcas
             estado='{$estado}'
         WHERE id = '{$id}'";
 $resultado = mysqli_query($conexao, $sql);
+
 if($resultado){
   header("Location:listar-marcas.php?sucesso=Alterado+com+Sucesso!");
   die();
+} else {
+	echo("Descrição do Erro: " . mysqli_error($conexao));
+	die();
 }

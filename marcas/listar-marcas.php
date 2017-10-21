@@ -1,5 +1,5 @@
 <?php
-	require_once("../banco/conexao.php");
+require_once("../config.php");
 
 	//busca linhas da tabela tipos
 	$sql = "SELECT * FROM marcas ORDER BY nome";

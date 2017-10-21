@@ -11,4 +11,7 @@ $resultado = mysqli_query($conexao, $sql);
 if($resultado){
   header("Location:listar-transportadoras.php?sucesso=Alterado+com+Sucesso!");
   die();
+} else {
+	echo("Descrição do Erro: " . mysqli_error($conexao));
+	die();
 }

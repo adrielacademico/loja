@@ -1,12 +1,12 @@
 <?php
-	require_once("../banco/conexao.php");
+require_once("../config.php");
 
-	//busca linhas da tabela tipos
-	$sql = "SELECT * FROM categorias ORDER BY nome";
-	$resultado = mysqli_query($conexao, $sql);
+//busca linhas da tabela tipos
+$sql = "SELECT * FROM categorias ORDER BY nome";
+$resultado = mysqli_query($conexao, $sql);
 
-	require_once("../includes/header.php");
-	require_once("../includes/menu.php");
+require_once("../includes/header.php");
+require_once("../includes/menu.php");
 ?>
 
 

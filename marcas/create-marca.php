@@ -1,5 +1,5 @@
 <?php
-	require_once("../banco/conexao.php");
+require_once("../config.php");
 
 if (isset($_POST['enviar'])) {
   $nome = $_POST['nome'];
@@ -13,8 +13,8 @@ if (isset($_POST['enviar'])) {
 
   if ($resultado) {
   	header("Location:listar-marcas.php?sucesso=Adicionado+com+sucesso!");
-  }
-
+  } else {
+		echo("Descrição do Erro: " . mysqli_error($conexao));
+		die();
+	}
 }
-
-?>

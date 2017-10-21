@@ -11,8 +11,8 @@ if (isset($_POST['enviar'])) {
 
   if ($resultado) {
   	header("Location:listar-transportadoras.php?sucesso=Adicionado+com+sucesso!");
-  }
-
+  } else {
+		echo("Descrição do Erro: " . mysqli_error($conexao));
+		die();
+	}
 }
-
-?>

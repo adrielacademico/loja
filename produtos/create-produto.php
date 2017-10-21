@@ -25,7 +25,7 @@ if (isset($_POST['enviar'])) {
   if ($resultado) {
   	header("Location:listar-produtos.php?sucesso=Adicionado+com+sucesso!");
   } else {
-		echo("Error description: " . mysqli_error($conexao));
+		echo("Descrição do Erro: " . mysqli_error($conexao));
 		die();
 	}
 
