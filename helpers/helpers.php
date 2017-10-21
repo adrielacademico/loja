@@ -1,7 +1,7 @@
 <?php
 
-if (!function_exists('mysql_to_ptBR_data')) {
-  function mysql_to_ptBR_data($data) {
+if (!function_exists('dataMysqlParaPtBr')) {
+  function dataMysqlParaPtBr($data) {
 		return date('d/m/Y', strtotime($data));
 	}
 }

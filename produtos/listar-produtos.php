@@ -1,5 +1,5 @@
 <?php
-	require_once("../banco/conexao.php");
+require_once("../config.php");
 
 	//busca linhas da tabela tipos
 	$sql = "SELECT * FROM produtos ORDER BY nome";
@@ -55,10 +55,10 @@
 						<td><?php echo $produto->nome ?></td>
 						<td><?php echo $produto->marca_id ?></td>
 						<td><?php echo $produto->categoria_id ?></td>
-						<td><?php echo date("d/m/Y", strtotime($produto->data_cadastro)) ?></td>
-						<td><?php echo date("d/m/Y", strtotime($produto->data_validade)) ?></td>
+						<td><?php echo dataMysqlParaPtBr($produto->data_cadastro) ?></td>
+						<td><?php echo dataMysqlParaPtBr($produto->data_validade) ?></td>
 						<td><?php echo $produto->quantidade ?></td>
-						<td><?php echo $produto->valor ?></td>
+						<td><?php echo moedaEmReais($produto->valor) ?></td>
 						<td><?php echo $produto->descricao ?></td>
 						<td><?php echo $produto->imagem ?></td>
 						<td>

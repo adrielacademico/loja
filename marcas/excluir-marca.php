@@ -1,6 +1,6 @@
 <?php
 require_once("../config.php");
-$id = $_GET['id'];
+$id = (int) $_GET['id'];
 $sql = "DELETE FROM marcas WHERE id = $id";
 $resultado = mysqli_query($conexao, $sql);
 if($resultado){

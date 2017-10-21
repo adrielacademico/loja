@@ -1,10 +1,10 @@
 <?php
-require_once("../banco/conexao.php");
+require_once("../config.php");
 
-$id = $_POST['id'];
-$nome = $_POST['nome'];
+$id = (int) $_POST['id'];
+$nome = mysqli_real_escape_string($conexao, $_POST['nome']);
 
-$sql = "UPDATE transportadoras SET nome='{$nome}' WHERE id = '{$id}'";
+$sql = "UPDATE transportadoras SET nome='{$nome}' WHERE id = $id";
 
 $resultado = mysqli_query($conexao, $sql);
 

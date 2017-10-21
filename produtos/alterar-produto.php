@@ -1,30 +1,29 @@
 <?php
-require_once("../banco/conexao.php");
+require_once("../config.php");
 
-$id = $_POST['id'];
-$nome = $_POST['nome'];
-$data_validade = $_POST['data_validade'];
-$data_fabricacao = $_POST['data_fabricacao'];
-$quantidade = $_POST['quantidade'];
-$valor = $_POST['valor'];
-$descricao = $_POST['descricao'];
-$estado = $_POST['estado'];
-$imagem = $_POST['imagem'];
-$marca_id = $_POST['marca_id'];
-$categoria_id = $_POST['categoria_id'];
+$id = (int) $_POST['id'];
+$nome = mysqli_real_escape_string($conexao, $_POST['nome']);
+$data_validade = mysqli_real_escape_string($conexao, dataPtBrParaMysql($_POST['data_validade']));
+$valor = mysqli_real_escape_string($conexao, $_POST['valor']);
+$descricao = mysqli_real_escape_string($conexao, $_POST['descricao']);
+$imagem = mysqli_real_escape_string($conexao, $_POST['imagem']);
+$quantidade = (int) $_POST['quantidade'];
+$marca_id = (int) $_POST['marca_id'];
+$categoria_id = (int) $_POST['categoria_id'];
+$estado = (int) $_POST['estado'];
 
-$sql = "UPDATE categorias
+
+$sql = "UPDATE produtos
         SET nome='{$nome}',
 						data_validade = '{$data_validade}',
-						data_fabricacao = '{$data_fabricacao}',
-						quantidade = '{$quantidade}',
 						valor = '{$valor}',
+						descricao='{$descricao}',
 						imagem = '{$imagem}',
-						marca_id = '{$marca_id}',
-						categoria_id = '{$categoria_id}',
-            descricao='{$descricao}',
-            estado='{$estado}'
-        WHERE id = '{$id}'";
+						quantidade = $quantidade,
+						marca_id = $marca_id,
+						categoria_id = $categoria_id,
+            estado=$estado
+        WHERE id = $id";
 
 $resultado = mysqli_query($conexao, $sql);
 if($resultado){

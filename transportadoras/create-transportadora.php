@@ -1,8 +1,9 @@
 <?php
-	require_once("../banco/conexao.php");
+require_once("../config.php");
 
 if (isset($_POST['enviar'])) {
-  $nome = $_POST['nome'];
+
+	$nome = mysqli_real_escape_string($conexao, $_POST['nome']);
 
   $sql = "INSERT INTO transportadoras (nome)
   VALUES ('{$nome}');";

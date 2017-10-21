@@ -2,12 +2,12 @@
 require_once("../config.php");
 
 if (isset($_POST['enviar'])) {
-  $nome = $_POST['nome'];
-  $descricao = $_POST['descricao'];
-  $estado = $_POST['estado'];
+	$nome = mysqli_real_escape_string($conexao, $_POST['nome']);
+	$descricao = mysqli_real_escape_string($conexao, $_POST['descricao']);
+	$estado = (int) $_POST['estado'];
 
   $sql = "INSERT INTO marcas (nome, descricao, estado)
-  VALUES ('{$nome}','{$descricao}','{$estado}');";
+  VALUES ('{$nome}','{$descricao}', $estado);";
 
   $resultado = mysqli_query($conexao, $sql);
 

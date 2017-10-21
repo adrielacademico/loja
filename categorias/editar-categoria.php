@@ -1,8 +1,8 @@
 <?php
 require_once("../config.php");
 
-$id = $_GET['id'];
-$sql = "SELECT * FROM categorias WHERE id = {$id}";
+$id = (int) $_GET['id'];
+$sql = "SELECT * FROM categorias WHERE id = $id";
 
 $resultado = mysqli_query($conexao, $sql);
 $categoria = mysqli_fetch_object($resultado);

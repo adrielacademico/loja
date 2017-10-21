@@ -1,12 +1,12 @@
 <?php
-require_once("../banco/conexao.php");
+require_once("../config.php");
 
 //buscar categorias
-$sql = "SELECT * FROM categorias ORDER BY nome";
+$sql = "SELECT * FROM categorias WHERE estado = 1 ORDER BY nome";
 $categoriasNoBancoDeDados = mysqli_query($conexao, $sql);
 
 //buscar marcas
-$sql = "SELECT * FROM marcas ORDER BY nome";
+$sql = "SELECT * FROM marcas WHERE estado = 1 ORDER BY nome";
 $marcasNoBancoDeDados = mysqli_query($conexao, $sql);
 
 //Trazendo o header HTML para a página
@@ -44,27 +44,18 @@ require_once("../includes/menu.php");
 			<div class="col-md-3">
 				<div class="form-group">
 					<label>Valor R$</label>
-					<input type="text" name="valor" class="form-control" id="valor">
+					<input type="text" name="valor" class="form-control text-right" id="valor">
 				</div>
 			</div>
 
 			<div class="col-md-3">
-				<!-- <div class="form-group">
-					<label>Data de Validade</label>
-					<input type="date" name="data_validade" class="form-control">
-				</div> -->
-
-
 				<label>Data de Validade</label>
 				<div class="input-group date">
-				    <input type="text" class="form-control" id="calendario" data-date-format="dd/mm/yyyy">
+				    <input type="text" name="data_validade" class="form-control" id="calendario" data-date-format="dd/mm/yyyy">
 				    <div class="input-group-addon">
 				        <span class="glyphicon glyphicon-th"></span>
 				    </div>
 				</div>
-
-
-
 			</div>
 
 			<div class="col-md-3">
