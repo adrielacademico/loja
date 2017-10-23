@@ -14,7 +14,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="index.php">
+			<a class="navbar-brand" href="home-sistema.php">
 				<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
 					 Área Administrativa
 			</a>
@@ -23,7 +23,7 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="index.php">Home</a></li>
+				<li><a href="home-sistema.php">Home</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -55,11 +55,15 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuário <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
+
+						<?php if (isset($_SESSION["nome_usuario"]) && $_SESSION["nivel_usuario"] == "GERENTE") : ?>
+							<li><a href="usuarios/form-usuario.php">Novo Usuário</a></li>
+							<li><a href="usuarios/listar-usuarios.php">Listar Usuários</a></li>
+						<?php endif; ?>
+
+						<li><a href="#">Trocar Senha</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#">Separated link</a></li>
+						<li><a href="logicaDeAutenticacao/deslogar.php">Sair do Sistema</a></li>
 					</ul>
 				</li>
 			</ul>

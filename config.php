@@ -8,6 +8,11 @@
 **/
 
 /**
+* INICIANDO A SESSÃO PHP
+**/
+//session_start();
+
+/**
 * ===========================================================================
 * helpers/helpers.php
 * Script com funções criadas pelo programador
@@ -29,4 +34,11 @@ require_once("helpers/helpers.php");
 
 require_once("conexao/conexao.php");
 
-?>
+/**
+* ===========================================================================
+* logicaDeAutenticacao/verifica-se-usuario-esta-logado.php
+* Script que verifica se existe uma sessão e se o usuário está logado.
+* ===========================================================================
+**/
+
+require_once("logicaDeAutenticacao/verifica-se-usuario-esta-logado.php");
